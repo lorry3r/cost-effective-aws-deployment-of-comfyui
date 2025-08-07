@@ -29,7 +29,7 @@ class ComfyUIStack(Stack):
                  cheap_vpc: bool = True,
                  # Spot
                  use_spot: bool = True,
-                 spot_price: str = "0.752",
+                 spot_price: str = "1.5",
                  # Auto Scaling
                  auto_scale_down: bool = True,
                  schedule_auto_scaling: bool = False,

@@ -105,17 +105,9 @@ class AsgConstruct(Construct):
                 launch_template=launchTemplate,
                 launch_template_overrides=[
                     autoscaling.LaunchTemplateOverrides(
-                        instance_type=ec2.InstanceType("g4dn.xlarge")),
+                        instance_type=ec2.InstanceType("g6e.4xlarge")),
                     autoscaling.LaunchTemplateOverrides(
-                        instance_type=ec2.InstanceType("g5.xlarge")),
-                    autoscaling.LaunchTemplateOverrides(
-                        instance_type=ec2.InstanceType("g6.xlarge")),
-                    autoscaling.LaunchTemplateOverrides(
-                        instance_type=ec2.InstanceType("g4dn.2xlarge")),
-                    autoscaling.LaunchTemplateOverrides(
-                        instance_type=ec2.InstanceType("g5.2xlarge")),
-                    autoscaling.LaunchTemplateOverrides(
-                        instance_type=ec2.InstanceType("g6.2xlarge")),
+                        instance_type=ec2.InstanceType("g6e.2xlarge")), 
                 ],
             ),
             min_capacity=0,
@@ -144,8 +136,8 @@ class AsgConstruct(Construct):
                 "CPUUtilizationAlarm",
                 metric=cpu_utilization_metric,
                 threshold=1,
-                evaluation_periods=60,
-                datapoints_to_alarm=60,
+                evaluation_periods=35,
+                datapoints_to_alarm=35,
                 comparison_operator=cloudwatch.ComparisonOperator.LESS_THAN_THRESHOLD
             )
             scaling_action = autoscaling.StepScalingAction(
