@@ -105,9 +105,7 @@ class AsgConstruct(Construct):
                 launch_template=launchTemplate,
                 launch_template_overrides=[
                     autoscaling.LaunchTemplateOverrides(
-                        instance_type=ec2.InstanceType("g6e.4xlarge")),
-                    autoscaling.LaunchTemplateOverrides(
-                        instance_type=ec2.InstanceType("g6e.2xlarge")), 
+                        instance_type=ec2.InstanceType("g5.4xlarge")),
                 ],
             ),
             min_capacity=0,
