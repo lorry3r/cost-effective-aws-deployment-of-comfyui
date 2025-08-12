@@ -103,7 +103,7 @@ class EcsConstruct(Construct):
                 driver="public.ecr.aws/j1l5j1d1/rexray-ebs",
                 driver_opts={
                     "volumetype": "gp3",
-                    "size": "250"  # Size in GiB
+                    "size": "150"  # Size in GiB
                 },
                 autoprovision=True
             )
